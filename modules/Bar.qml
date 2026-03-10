@@ -1,6 +1,7 @@
 import Quickshell
 import QtQuick
 import QtQuick.Layouts
+import Quickshell.Services.SystemTray
 import "../theme"
 
 Scope {
@@ -11,7 +12,6 @@ Scope {
 	    screen: modelData
 	    anchors { top: true; left: true; right: true }
 	    implicitHeight: Config.barHeight
-
 	    color: Colors.background
 
 	    RowLayout {
@@ -29,6 +29,17 @@ Scope {
 		}
 
 		CommonContainer {
+		    visible: trayItems.count > 0
+
+		    Row {
+			spacing: Config.traySpacing
+			TrayWidget { 
+			    id: trayItems
+			}
+		    }
+		}
+
+		CommonContainer {
 		    ClockWidget {}
 		}
 
@@ -38,4 +49,4 @@ Scope {
 	    }
 	}
     }
-}
+} 

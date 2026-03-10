@@ -8,9 +8,12 @@ QtObject {
 
     readonly property int widgetPadding: 12
 
+    //widgets
     readonly property int maxTitleWidth: 200
 
-    // workspaces
+    readonly property int trayIconSize: 16
+    readonly property int traySpacing: 6
+
     readonly property int wsWidthActive: 24
     readonly property int wsWidthOccupied: 12
     readonly property int wsWidthEmpty: 8

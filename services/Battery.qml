@@ -13,5 +13,5 @@ Singleton {
     property bool charging: device.state === UPowerDeviceState.Charging
 
     property bool pluggedIn: device.state === UPowerDeviceState.FullyCharged || 
-                             device.state === UPowerDeviceState.PendingCharge
+    device.state === UPowerDeviceState.PendingCharge
 }

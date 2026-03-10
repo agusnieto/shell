@@ -3,8 +3,8 @@ import "../services"
 import "../theme"
 
 Text {
-  text: Time.time
-  font.family: Fonts.name
-  font.pixelSize: Fonts.size
-  color: Colors.white 
+    text: Time.time
+    font.family: Fonts.name
+    font.pixelSize: Fonts.size
+    color: Colors.white 
 }
