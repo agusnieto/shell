@@ -20,6 +20,6 @@ QtObject {
     readonly property color brightCyan:    "#5ef1ff"
     readonly property color brightWhite:   "#ffffff"
 
-    readonly property color background: "#0a0a0a"
-    readonly property color surface:    "#3c4048"
+    readonly property color background: "#0a0a0a" // Darkest
+    readonly property color surface:    "#1e2024" // Darker gray
 }

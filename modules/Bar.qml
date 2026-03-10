@@ -5,31 +5,37 @@ import "../theme"
 
 Scope {
     Variants {
-        model: Quickshell.screens
-        PanelWindow {
-            required property var modelData
-            screen: modelData
-            anchors { top: true; left: true; right: true }
-            implicitHeight: Config.barHeight
-            
-            color: Colors.background
+	model: Quickshell.screens
+	PanelWindow {
+	    required property var modelData
+	    screen: modelData
+	    anchors { top: true; left: true; right: true }
+	    implicitHeight: Config.barHeight
 
-            RowLayout {
-                anchors.fill: parent
-                spacing: Config.widgetGap
+	    color: Colors.background
 
-                Item { Layout.fillWidth: true }
+	    RowLayout {
+		anchors.fill: parent
+		spacing: Config.widgetGap
 
-                WorkspaceWidget {}
-                
-                ActiveWindow {
-                    Layout.maximumWidth: 150
-                }
-                
-                ClockWidget {}
+		Item { Layout.fillWidth: true }
 
-                Item { Layout.fillWidth: true }
-            }
-        }
+		CommonContainer {
+		    WorkspaceWidget {}
+		}
+
+		CommonContainer {
+		    ActiveWindow {}
+		}
+
+		CommonContainer {
+		    ClockWidget {}
+		}
+
+		BatteryWidget {}
+
+		Item { Layout.fillWidth: true }
+	    }
+	}
     }
 }

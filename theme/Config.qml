@@ -6,6 +6,10 @@ QtObject {
     readonly property int barHeight: 32
     readonly property int widgetGap: 20
 
+    readonly property int widgetPadding: 12
+
+    readonly property int maxTitleWidth: 200
+
     // workspaces
     readonly property int wsWidthActive: 24
     readonly property int wsWidthOccupied: 12
